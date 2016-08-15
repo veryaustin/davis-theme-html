@@ -1,0 +1,124 @@
+@import 'normalize';
+
+// ----- Variables ----- //
+
+$dark_grey: #4A4A4A;
+$medium_grey: #9B9B9B;
+$light_grey: #C4C4C4;
+$white: #FFFFFF;
+$highlight: #D0021B;
+
+
+// ----- Global Styles ----- //
+
+body {
+  font-family: 'Open-Sans', sans-serif;
+  color: $dark_grey;
+}
+
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto;
+};
+
+header {
+  padding: 1.25em 0 2.5em 0;
+  border-bottom: 1px solid $light_grey;
+  #logo {
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: -.035em;
+    margin: 0;
+    padding-top: 5px;
+    float: left;
+    span {
+      font-weight: 700;
+    }
+  }
+  nav {
+    text-transform: uppercase;
+    font-size: .75em;
+    float: right;
+    padding-top: 8px;
+    a {
+      margin-left: 2em;
+      text-decoration: none;
+      color: $medium_grey;
+      &:hover, &:active {
+        color: $dark_grey;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.content {
+  position: relative;
+  min-height: 100%;
+  margin-bottom: -2.063em;
+}
+
+// Footer Clearfix //
+.content:after {
+  content: "";
+  display: block;
+}
+
+footer, .content:after {
+  height: 2.063em;
+}
+
+.post {
+  text-align: center;
+  margin-top: 45px;
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 3px;
+    text-transform: uppercase;
+    letter-spacing: -.035em;
+    a {
+      text-decoration: none;
+      color: $dark_grey;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .date {
+    font-family: 'Raleway', sans-serif;
+    color: $medium_grey;
+    font-size: .813em;
+  }
+  .taglist {
+    .tag {
+      font-size: 0.625em;
+      text-decoration: none;
+      text-transform: lowercase;
+      color: $white;
+      background-color: $medium_grey;
+      padding: 2px 10px 3px 10px;
+      border-radius: 2px;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $light_grey;
+  background-color: $white;
+  margin-top: 5em;
+  padding: 2.063em;
+  font-size: .625em;
+  color: $light_grey;
+  span {
+    padding-top:0.313em;
+  }
+  #copy {
+    float:left;
+  }
+  #legal {
+    float: right;
+  }
+}
