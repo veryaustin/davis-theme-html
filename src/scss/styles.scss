@@ -1,4 +1,5 @@
 @import 'normalize';
+@import 'monokai';
 
 
 // ----- Variables ----- //
@@ -12,13 +13,23 @@ $highlight: #D0021B;
 
 // ----- Global Styles ----- //
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: 'Open-Sans', sans-serif;
   color: $dark_grey;
 }
 
-p {
-  font-size: 0.813em;
+p, hr, h4, h5, h6 {
+  margin: .9em 0;
+}
+
+p, li {
+  font-size: 1em;
+  line-height: 1.25em;
 }
 
 h1 {
@@ -26,10 +37,6 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.035em;
-}
-
-h2 {
-
 }
 
 h3 {
@@ -43,21 +50,63 @@ h4 {
   text-transform: uppercase;
 }
 
-h5 {
-
-}
-
 a:link, a:visited {
   color: $highlight;
   text-decoration:none;
 }
 
+ul, ol {
+  margin-left: 3em;
+}
+
+blockquote {
+  font-size: 1.3em;
+  border-left: 0.4em solid $light_grey;
+  padding-left: 1.2em;
+}
+
+hr {
+  border-top: 1px solid $light_grey;
+}
+
+input, textarea {
+  font-size: 1em;
+  padding: 0.3em;
+  border: 1px solid $light_grey;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 2em auto;
+}
 
 .wrapper {
   width: 1440px;
   max-width: 90%;
   margin: 0 auto;
 };
+
+.content {
+  position: relative;
+  min-height: 100%;
+  margin: 2.813em 0 -2.063em 0;
+}
+
+
+// ----- Footer Clearfix ----- //
+
+.content:after {
+  content: "";
+  display: block;
+}
+
+footer, .content:after {
+  height: 2.063em;
+}
+
+
+// ----- Header Styles ----- //
 
 header {
   padding: 1.25em 0 2.5em 0;
@@ -91,54 +140,29 @@ header {
   }
 }
 
-.content {
-  position: relative;
-  min-height: 100%;
-  margin: 2.813em 0 -2.063em 0;
-}
 
+// ----- Footer Styles ----- //
 
-// ----- Footer Clearfix ----- //
-
-.content:after {
-  content: "";
-  display: block;
-}
-
-footer, .content:after {
-  height: 2.063em;
-}
-
-.post {
-  text-align: center;
-  padding-bottom: 2.813em;
-  .post-date {
-    margin: 0;
+footer {
+  border-top: 0.063em solid $light_grey;
+  background-color: $white;
+  margin-top: 5em;
+  padding: 2.063em;
+  font-size: .625em;
+  color: $light_grey;
+  span {
+    padding-top: 0.313em;
   }
-  .post-title {
-    margin: 5px 0;
-    a {
-      color: $dark_grey;
-      &:hover {
-        color: $medium_grey;
-      }
-    }
+  #copy {
+    float:left;
+  }
+  #legal {
+    float: right;
   }
 }
 
-.post-detail-header {
-  text-align: center;
-  h1 {
-    font-size: 3.250em;
-    margin-top: 0.133em;
-  }
-  h3 {
-    margin: 0px;
-  }
-  h4 {
-    margin: 12px 0;
-  }
-}
+
+// ----- Post Tag Styles ----- //
 
 .taglist {
   .tag {
@@ -152,9 +176,28 @@ footer, .content:after {
   }
 }
 
-.post-detail-content {
 
+// ----- Posts Overview Styles ----- //
+
+.post {
+  text-align: center;
+  padding-bottom: 2.813em;
+  .post-date {
+    margin: 0;
+  }
+  .post-title {
+    margin: 0.313em 0;
+    a {
+      color: $dark_grey;
+      &:hover {
+        color: $medium_grey;
+      }
+    }
+  }
 }
+
+
+// ----- Pagination Styles ----- //
 
 .pagination {
   margin-top: 10em;
@@ -179,22 +222,25 @@ footer, .content:after {
 }
 
 
-// ----- Footer Styles ----- //
+// ----- Post Detail Styles ----- //
 
-footer {
-  border-top: 0.063em solid $light_grey;
-  background-color: $white;
-  margin-top: 5em;
-  padding: 2.063em;
-  font-size: .625em;
-  color: $light_grey;
-  span {
-    padding-top: 0.313em;
+.post-detail-header {
+  text-align: center;
+  margin: 100px 0;
+  h1 {
+    font-size: 3.250em;
+    margin-top: 0.133em;
   }
-  #copy {
-    float:left;
+  h3 {
+    margin: 0px;
   }
-  #legal {
-    float: right;
+  h4 {
+    margin: 12px 0;
+  }
+}
+
+.post-detail-content {
+  h1 {
+    margin: 32px 0 0 0;
   }
 }
