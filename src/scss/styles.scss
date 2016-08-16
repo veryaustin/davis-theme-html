@@ -50,9 +50,12 @@ h4 {
   text-transform: uppercase;
 }
 
-a:link, a:visited {
+a {
   color: $highlight;
   text-decoration:none;
+  &:visited {
+    color: $highlight;
+  }
 }
 
 ul, ol {
@@ -128,12 +131,14 @@ header {
     font-size: 0.75em;
     float: right;
     margin-top: 0.5em;
-    a:link {
+    a {
       margin-left: 2em;
       text-decoration: none;
       color: $medium_grey;
-      &:hover, &:active {
+      &:hover, &:visited {
         color: $dark_grey;
+      }
+      &:active {
         text-decoration: underline;
       }
     }

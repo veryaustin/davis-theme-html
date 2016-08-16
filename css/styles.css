@@ -524,9 +524,12 @@ h4 {
   text-transform: uppercase;
 }
 
-a:link, a:visited {
+a {
   color: #D0021B;
   text-decoration: none;
+}
+a:visited {
+  color: #D0021B;
 }
 
 ul, ol {
@@ -598,13 +601,15 @@ header nav {
   float: right;
   margin-top: 0.5em;
 }
-header nav a:link {
+header nav a {
   margin-left: 2em;
   text-decoration: none;
   color: #9B9B9B;
 }
-header nav a:link:hover, header nav a:link:active {
+header nav a:hover, header nav a:visited {
   color: #4A4A4A;
+}
+header nav a:active {
   text-decoration: underline;
 }
 
