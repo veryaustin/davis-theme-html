@@ -1,5 +1,6 @@
 @import 'normalize';
 
+
 // ----- Variables ----- //
 
 $dark_grey: #4A4A4A;
@@ -60,7 +61,9 @@ header {
   margin-bottom: -2.063em;
 }
 
-// Footer Clearfix //
+
+// ----- Footer Clearfix ----- //
+
 .content:after {
   content: "";
   display: block;
@@ -69,6 +72,9 @@ header {
 footer, .content:after {
   height: 2.063em;
 }
+
+
+// ----- Global List ----- //
 
 .post {
   text-align: center;
@@ -104,6 +110,31 @@ footer, .content:after {
     }
   }
 }
+
+.pagination {
+  margin-top: 10em;
+  ul {
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline;
+      margin: .063em;
+      a {
+        padding: .4em .7em;
+        color: $dark_grey;
+        text-decoration: none;
+        &:active {
+          background-color: $highlight;
+          border-radius: .250em;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+// ----- Footer Styles ----- //
 
 footer {
   border-top: 1px solid $light_grey;
