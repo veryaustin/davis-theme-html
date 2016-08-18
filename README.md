@@ -1,4 +1,4 @@
-veryaustin.com (Mid 2016 Edition)
+Raw HTML/CSS markup for "Min" ghost blogging theme
 -----------------------------
 
-Mid year re-design of veryaustin.com to reflect new skills, projects and interests.
+Documentation coming soon!
