@@ -680,24 +680,10 @@ footer #legal {
 
 .pagination {
   margin-top: 10em;
-}
-.pagination ul {
-  padding: 0;
   text-align: center;
 }
-.pagination ul li {
-  display: inline;
-  margin: 0.063em;
-}
-.pagination ul li a {
-  padding: 0.4em 0.7em;
-  color: #4A4A4A;
-  text-decoration: none;
-}
-.pagination ul li a:active {
-  background-color: #D0021B;
-  border-radius: 0.250em;
-  color: #FFFFFF;
+.pagination a {
+  font-weight: 700;
 }
 
 .post-detail-header {

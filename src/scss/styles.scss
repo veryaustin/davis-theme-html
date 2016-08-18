@@ -227,23 +227,9 @@ footer {
 
 .pagination {
   margin-top: 10em;
-  ul {
-    padding: 0;
-    text-align: center;
-    li {
-      display: inline;
-      margin: 0.063em;
-      a {
-        padding: 0.4em 0.7em;
-        color: $dark_grey;
-        text-decoration: none;
-        &:active {
-          background-color: $highlight;
-          border-radius: 0.250em;
-          color: $white;
-        }
-      }
-    }
+  text-align: center;
+  a {
+    font-weight: 700;
   }
 }
 
