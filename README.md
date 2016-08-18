@@ -1,4 +1,4 @@
-Raw HTML/CSS markup for "Min" ghost blogging theme
+Raw HTML/CSS markup for "Min": A simple theme for Ghost blogging platform
 -----------------------------
 
 Documentation coming soon!
